@@ -98,7 +98,6 @@ private:
         int u = query(2 * at, l, mid, L, R);
         int v = query(2 * at + 1, mid + 1, r, L, R);
         return u + v;
-
     }
 
 public:
@@ -134,7 +133,6 @@ int main() {
                 int res = ds.query(l, r);
                 printf("%d\n", res);
             }
-
         }
     }
     //fprintf(stderr, "\nRuntime: %.10fs\n", (double) (clock() - tStart) / CLOCKS_PER_SEC);
