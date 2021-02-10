@@ -98,7 +98,6 @@ private:
         int u = query(2 * at, l, mid, L, R);
         int v = query(2 * at + 1, mid + 1, r, L, R);
         return max(u, v);
-
     }
 
 public:
