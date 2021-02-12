@@ -43,7 +43,7 @@ template <TN T> T lcm(T a, T b) { return a * (b / gcd(a, b)); }
 int ar[N];
 
 // complexity O(n)
-vi sw_max(int n, int k){
+vi sw_min(int n, int k){
     vi ans;
     deque < pii > dq;
     for(int i = 1; i <= n; i++){
@@ -68,7 +68,7 @@ int main() {
         for (int i = 1; i <= n; ++i) {
             ar[i] = Int();
         }
-        vi ans = sw_max(n, k);
+        vi ans = sw_min(n, k);
         for (auto it : ans) {
             printf("%d\n", it);
         }
