@@ -47,12 +47,16 @@ vi sw_max(int n, int k){
     vi ans;
     deque < pii > dq;
     for(int i = 1; i <= n; i++){
-        while(!dq.empty() && dq.back().ff <= ar[i])
+        while(!dq.empty() && dq.back().ff <= ar[i]) {
             dq.pop_back();
-    dq.push_back(mp(ar[i], i));
-    while(dq.front().ss <= i - k)
-        dq.pop_front();
-    if(i >= k) ans.push_back(dq.front().ff);
+        }
+        dq.push_back({ar[i], i});
+        while(dq.front().ss <= i - k) {
+            dq.pop_front();
+        }
+        if(i >= k) {
+            ans.push_back(dq.front().ff);
+        }
     }
     return ans;
 }
