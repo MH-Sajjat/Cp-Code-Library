@@ -50,13 +50,13 @@ vi sw_min(int n, int k){
         while(!dq.empty() && dq.back().ff >= ar[i]) {
             dq.pop_back();
         }
-	    dq.push_back({ar[i], i});
-	    while(dq.front().ss <= i - k) {
-	        dq.pop_front();
-	    }
-	    if(i >= k) {
-	    	ans.push_back(dq.front().ff);
-	    }
+        dq.push_back({ar[i], i});
+        while(dq.front().ss <= i - k) {
+            dq.pop_front();
+        }
+        if(i >= k) {
+            ans.push_back(dq.front().ff);
+        }
     }
     return ans;
 }
