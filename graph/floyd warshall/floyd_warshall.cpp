@@ -23,6 +23,7 @@ int dy[8] = { -1, 0, 1, 0, -1, 1, 1, -1 };
 
 const int N       = (int) 2e3 + 5;
 const int mxN     = (int) 1e6 + 6;
+const int inf     = (int) 2e9 + 9;
 const ll MOD      = (ll) 1e9 + 7;
 
 #define    debug(x)    cerr << #x << " = " << x << '\n';
@@ -40,14 +41,16 @@ const ll MOD      = (ll) 1e9 + 7;
 template <TN T> T gcd(T a, T b) { return !b ? a : gcd(b, a % b); }
 template <TN T> T lcm(T a, T b) { return a * (b / gcd(a, b)); }
 
-ll dis[N][N];
-int par[N][N];
+vector<vll> dis;
+vector<vi> par;
 
 void precal(int n) {
+    dis.resize(n + 2, vll(n + 2));
+    par.resize(n + 2, vi(n + 2));
     for (int i = 1; i <= n; ++i) {
         for (int j = 1; j <= n; ++j) {
             if (i == j) dis[i][j] == 0LL;
-            else dis[i][j] = INT_MAX;
+            else dis[i][j] = inf;
             par[i][j] = j;
         }
     }
@@ -89,7 +92,7 @@ int main() {
         int q = Int();
         while (q--) {
             int u = Int(), v = Int();
-            if (dis[u][v] == INT_MAX) {
+            if (dis[u][v] == inf) {
                 printf("Infinite\n");
             } else {
                 printf("distance = %lld\n", dis[u][v]);
