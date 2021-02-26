@@ -23,6 +23,7 @@ int dy[8] = { -1, 0, 1, 0, -1, 1, 1, -1 };
 
 const int N       = (int) 2e5 + 5;
 const int mxN     = (int) 1e6 + 6;
+const int inf     = (int) 1e9 + 9;
 const ll MOD      = (ll) 1e9 + 7;
 
 #define    debug(x)    cerr << #x << " = " << x << '\n';
@@ -46,7 +47,7 @@ bool vis[N];
 
 // complexity O(vlogv + e) where v = number of vertex and e = number of edge
 void dijkstra(int src, int n) {
-    for (int i = 1; i <= n; ++i) dis[i] = INT_MAX;
+    for (int i = 1; i <= n; ++i) dis[i] = inf;
     priority_queue<pii> pq;
     dis[src] = 0;
     par[src] = 0;
