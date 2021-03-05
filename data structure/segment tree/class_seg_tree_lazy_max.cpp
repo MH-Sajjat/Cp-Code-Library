@@ -64,7 +64,6 @@ private:
         g[at].mx = max(g[2 * at].mx, g[2 * at + 1].mx);
     }
 
-    // complexity O(logn)
     void propagate(int at, int l, int r) {
         int mid = (l + r) >> 1;
         g[2 * at].mx += g[at].prop;
