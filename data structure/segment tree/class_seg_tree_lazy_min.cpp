@@ -64,7 +64,6 @@ private:
         g[at].mn = min(g[2 * at].mn, g[2 * at + 1].mn);
     }
 
-    // complexity O(logn)
     void propagate(int at, int l, int r) {
         int mid = (l + r) >> 1;
         g[2 * at].mn += g[at].prop;
