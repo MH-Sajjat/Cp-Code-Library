@@ -64,7 +64,6 @@ private:
         g[at].sum = g[2 * at].sum + g[2 * at + 1].sum;
     }
 
-    // complexity O(logn)
     void propagate(int at, int l, int r) {
         int mid = (l + r) >> 1;
         g[2 * at].sum += (g[at].prop * (mid - l + 1));
