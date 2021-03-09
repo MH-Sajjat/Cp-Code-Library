@@ -1,3 +1,9 @@
+/*-----------------------------------------
+   Bismillahir Rahmanir Rahim
+   Author  : Md. Sajjat Hosen
+   Created : 09-March,2021 11:15:34 PM
+------------------------------------------*/
+
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -44,7 +50,7 @@ bool isOn(int n, int at) { return (bool) (n & (1 << at)); }
 int bitOn(int n, int at) { return n = n | (1 << at); }
 
 int vis[(N >> 5) + 2];
-vi v;
+vi prime;
 
 // complexity O(nloglogn)
 void bitwiseSieve() {
@@ -61,7 +67,7 @@ void bitwiseSieve() {
     }
     for (int i = 2; i <= N; ++i) {
         if (!isOn(vis[i >> 5], i & 31)) {
-            v.pb(i);
+            prime.pb(i);
         }
     }
 }
@@ -74,7 +80,7 @@ int main() {
     int test = 1, tc = 0;
     while (test--) {
         bitwiseSieve();
-        for (auto x : v) cout << x  << " ";
+        for (auto x : prime) cout << x  << " ";
         cout << nl;
     }
     //fprintf(stderr, "\nRuntime: %.10fs\n", (double) (clock() - tStart) / CLOCKS_PER_SEC);
