@@ -1,9 +1,3 @@
-/*-----------------------------------------
-   Bismillahir Rahmanir Rahim
-   Author  : Md. Sajjat Hosen
-   Created : 14-March,2021 12:06:28 AM
-------------------------------------------*/
-
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
