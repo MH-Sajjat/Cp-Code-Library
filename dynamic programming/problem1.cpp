@@ -41,16 +41,16 @@ template <TN T> T gcd(T a, T b) { return !b ? a : gcd(b, a % b); }
 template <TN T> T lcm(T a, T b) { return a * (b / gcd(a, b)); }
 
 // Given 2 x N grid. How many ways we can cover the whole grid with tiles
-// 2 x 1, 2 x 2, rotation allowed.
+// 2 x 1, 2 x 2, no rotation allowed.
 
 int dp[N];
 
 // complexity O(n)
 int fun(int n) {
   if (n == 1) return 1;
-  if (n == 2) return 3;
+  if (n == 2) return 2;
   if (dp[n] != -1) return dp[n];
-  return dp[n] = fun(n - 1) + 2 * fun(n - 2);
+  return dp[n] = fun(n - 1) + fun(n - 2);
 }
 
 int main() {
