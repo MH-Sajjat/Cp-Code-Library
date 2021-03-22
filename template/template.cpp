@@ -1,8 +1,8 @@
-/*-----------------------------------------
-   Bismillahir Rahmanir Rahim
-   Author  : Md. Sajjat Hosen
-   Created : 05-March,2021 10:10:44 AM
-------------------------------------------*/
+/*---------------------------------------
+   BISMILLAHIR RAHMANIR RAHIM
+   AUTHOR : Md. Sajjat Hossen
+   TIME : 
+----------------------------------------*/
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
