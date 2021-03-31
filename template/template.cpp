@@ -47,14 +47,14 @@ template <TN T> T gcd(T a, T b) { return !b ? a : gcd(b, a % b); }
 template <TN T> T lcm(T a, T b) { return a * (b / gcd(a, b)); }
 
 int main() {
-    //Fast_IO
-    //clock_t tStart = clock();
+    // Fast_IO
+    // clock_t tStart = clock();
     freopen("input.txt", "r", stdin);
-    //freopen("output.txt", "w", stdout);
+    // freopen("output.txt", "w", stdout);
     int test = 1, tc = 0;
     while (test--) {
         
     }
-    //fprintf(stderr, "\nRuntime: %.10fs\n", (double) (clock() - tStart) / CLOCKS_PER_SEC);
+    // fprintf(stderr, "\nRuntime: %.10fs\n", (double) (clock() - tStart) / CLOCKS_PER_SEC);
     return 0;
 }
