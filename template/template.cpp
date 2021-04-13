@@ -29,7 +29,7 @@ int dy[8] = { -1, 0, 1, 0, -1, 1, 1, -1 };
 
 const int N       = (int) 2e5 + 5;
 const int mxN     = (int) 1e6 + 6;
-const ll MOD      = (ll) 1e9 + 7;
+const int MOD     = (int) 1e9 + 7;
 
 #define    debug(x)    cerr << #x << " = " << x << '\n';
 #define    all(x)      x.begin(), x.end()
