@@ -30,6 +30,7 @@ int dy[8] = { -1, 0, 1, 0, -1, 1, 1, -1 };
 const int N       = (int) 2e5 + 5;
 const int mxN     = (int) 1e6 + 6;
 const int MOD     = (int) 1e9 + 7;
+const int INF     = (int) 1e9 + 9;
 const double EPS  = (double) 1e-9;
 
 #define    debug(x)    cerr << #x << " = " << x << '\n';
@@ -46,6 +47,9 @@ const double EPS  = (double) 1e-9;
 
 inline int add(int a, int b, int mod) { a += b; return a >= mod ? a - mod : a < 0 ? a + mod : a; }
 inline int mult(int a, int b, int mod) { return (ll) a * b % mod; }
+
+template <TN T> inline void umin(T &x, T y) { x = x < y ? x : y; }
+template <TN T> inline void umax(T &x, T y) { x = x > y ? x : y; }
 
 template <TN T> T gcd(T a, T b) { return !b ? a : gcd(b, a % b); }
 template <TN T> T lcm(T a, T b) { return a * (b / gcd(a, b)); }
