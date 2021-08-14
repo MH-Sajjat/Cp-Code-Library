@@ -54,6 +54,8 @@ template <TN T> inline void umax(T &x, T y) { x = x > y ? x : y; }
 template <TN T> T gcd(T a, T b) { return !b ? a : gcd(b, a % b); }
 template <TN T> T lcm(T a, T b) { return a * (b / gcd(a, b)); }
 
+// problem link: https://toph.co/p/just-another-range-query
+
 const int logn = 35;
 ll g[N * logn], lazy[N * logn];
 int L[N * logn], R[N * logn];
