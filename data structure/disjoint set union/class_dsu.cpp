@@ -63,13 +63,13 @@ public:
         }
     }
 
-    T find(int x) {
-        return g[x].par = g[x].par == x ? x : find(g[x].par);
+    T root(int x) {
+        return g[x].par = g[x].par == x ? x : root(g[x].par);
     }
 
-    void Union(int a, int b) {
-        int x = find(a);
-        int y = find(b);
+    void merge(int a, int b) {
+        int x = root(a);
+        int y = root(b);
         if (x == y) return;
         if (g[x].rank <= g[y].rank) swap(x, y);
         g[y].par = x;
@@ -91,7 +91,7 @@ int main() {
         dsu<int> ds(n);
         while (m--) {
             int a = Int(), b = Int();
-            ds.Union(a, b);
+            ds.merge(a, b);
         }
     }
     //fprintf(stderr, "\nRuntime: %.10fs\n", (double) (clock() - tStart) / CLOCKS_PER_SEC);
