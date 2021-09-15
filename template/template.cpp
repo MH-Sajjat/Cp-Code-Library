@@ -1,6 +1,6 @@
 /*------------------------------------
    bismillahir rahmanir rahim
-   author : md. sajjat hossen
+   @author : md. sajjat hossen
    created : 
 -------------------------------------*/
 
@@ -27,10 +27,10 @@ inline ll Long() { ll x; scanf("%lld", &x); return x; }
 int dx[8] = { 0, -1, 0, 1, -1, -1, 1, 1 };
 int dy[8] = { -1, 0, 1, 0, -1, 1, 1, -1 };
 
-const int N           = (int) 2e5 + 5;
-const int mxN         = (int) 1e6 + 6;
-const int MOD         = (int) 1e9 + 7;
-const int INF         = (int) 1e9 + 9;
+const int N         = (int) 2e5 + 5;
+const int mxN       = (int) 1e6 + 6;
+const int MOD       = (int) 1e9 + 7;
+const int INF       = (int) 1e9 + 9;
 const double EPS    = (double) 1e-9;
 
 #define debug(x)    cerr << #x << " = " << x << '\n';
