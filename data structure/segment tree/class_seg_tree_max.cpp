@@ -88,7 +88,7 @@ template <typename T> class SegTree {
 
     // complexity O(logN)
     T query(int at, int b, int e, int l, int r) {
-        if (r < b or e < l) return INT_MIN;
+        if (r < b or e < l) return INT_MAX;
         if (l <= b and e <= r) return tree[at];
         int mid = (b + e) >> 1;
         T x = query(2 * at, b, mid, l, r);
