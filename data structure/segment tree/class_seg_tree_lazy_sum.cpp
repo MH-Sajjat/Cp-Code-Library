@@ -116,7 +116,7 @@ private:
 public:
     SegTree(int n) {
         this->n = n;
-        tree.resize(4 * N);
+        tree.resize(4 * n);
         build(1, 1, n);
     }
 
