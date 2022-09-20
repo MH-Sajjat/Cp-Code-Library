@@ -42,16 +42,16 @@ void dfs(int u, int par = -1) {
     } else {
       dfs(v, u);
       low[u] = min(low[u], low[v]);
+      child++;
     }
     if (low[v] >= dis[u] and par != -1) art[u] = 1;
-    child++;
   }
   if (par == -1 and child > 1) art[u] = 1;
 }
 
 int main() {
 #ifdef LOCAL
-  freopen("input.txt", "r", stdin);
+  // freopen("input.txt", "r", stdin);
   // freopen("output.txt", "w", stdout);
 #endif
   ios_base::sync_with_stdio(false); cin.tie(0);
