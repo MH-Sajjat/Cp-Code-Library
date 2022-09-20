@@ -43,8 +43,8 @@ void dfs(int u, int par = -1) {
       dfs(v, u);
       low[u] = min(low[u], low[v]);
       child++;
+      if (low[v] >= dis[u] and par != -1) art[u] = 1;
     }
-    if (low[v] >= dis[u] and par != -1) art[u] = 1;
   }
   if (par == -1 and child > 1) art[u] = 1;
 }
